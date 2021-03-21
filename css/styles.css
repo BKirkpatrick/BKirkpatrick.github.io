@@ -1,12 +1,11 @@
 body {
-    background-color: darkslategray;
+    background-color: rgb(16, 59, 77);
 }
 
 h1 { 
-    color: green;
-    background-color: hotpink;
+    color: rgb(83, 211, 83);
 }
 
 p {
-    color:palegreen;
+    color:rgb(83, 211, 83);
 }

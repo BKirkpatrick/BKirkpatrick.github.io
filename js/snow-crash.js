@@ -154,22 +154,28 @@ function createPixelArt(containerElementId, pixelArray, sizeOfPixel, colorsObjec
     pixel.style.boxShadow = boxShadow;
 }
 
-function snowCrash(start, final, delay){
-    createPixelArt("demo", start, 12, colorsObject);
-    //createPixelArt("demo", lol, 12, colorsObject);
+var scene = {
+    frames : [
+        start,
+        final
+    ]
+};
+
+function snowCrash(time){
+    pixel.style.boxShadow = "";
+
+    for (var i = 0, len = scene.frames.len; i < len; i++) {
+        var frame = scene.frames[i];
+        createPixelArt("demo", frame, 12, colorsObject);
+    }
+
+    requestAnimationFrame(snowCrash);
+    //createPixelArt("demo", final, 12, colorsObject);
     //createPixelArt("demo", final, 12, colorsObject);
 }
 
-//createPixelArt("demo", start, 12, colorsObject);
-createPixelArt("demo", final, 12, colorsObject);
 
-//sleep(2000);
+//createPixelArt("demo", final, 12, colorsObject);
 
-//setTimeout(createPixelArt("demo", reset, 12, colorsObject),10);
-
-
-
-
-
-//snowCrash(start, final, 2000);
+snowCrash(0);
 

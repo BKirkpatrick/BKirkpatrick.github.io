@@ -11,6 +11,13 @@ body {
     height: 100%;
 }
 
+canvas {
+    margin: 5-px auto 0;
+    display: block;
+    /* background: #fff; */
+    /* border: 2px solid rgb(245, 166, 205); */
+}
+
 head {
     color: rgb(39, 25, 95);
 }

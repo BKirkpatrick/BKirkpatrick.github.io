@@ -7,6 +7,11 @@ import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
+import BeeMonitor from './pages/projects/BeeMonitor';
+import PortfolioOptimiser from './pages/projects/PortfolioOptimiser';
+import RatTracker from './pages/projects/RatTracker';
+
+
 function App() {
   return (
     <>
@@ -19,7 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/bee-monitor" element={<BeeMonitor />} />
         <Route path="/projects/rat-tracker" element={<RatTracker />} />
-        <Route path="/projects/portfolio-optimizer" element={<PortfolioOptimizer />} />
+        <Route path="/projects/portfolio-optimizer" element={<PortfolioOptimiser />} />
       </Routes>
     </>
   );

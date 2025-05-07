@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import BeeMonitor from './pages/projects/BeeMonitor';
 import PortfolioOptimiser from './pages/projects/PortfolioOptimiser';
 import RatTracker from './pages/projects/RatTracker';
+import TreeDashboard from './pages/projects/TreeDashboard';
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
         <Route path="/projects/bee-monitor" element={<BeeMonitor />} />
         <Route path="/projects/rat-tracker" element={<RatTracker />} />
         <Route path="/projects/portfolio-optimiser" element={<PortfolioOptimiser />} />
+        <Route path="/projects/tree-dashboard" element={<TreeDashboard />} />
       </Routes>
     </>
   );

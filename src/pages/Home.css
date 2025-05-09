@@ -1,0 +1,65 @@
+.home {
+    font-family: 'Courier New', monospace;
+    color: #39ff14;
+    background-color: #000000;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .crt-toggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    background: #ff00ff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    z-index: 10000;
+    cursor: pointer;
+    box-shadow: 0 0 6px #ff00ff;
+  }
+  
+  .crt-overlay {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 0, 0.2) 0px,
+      rgba(0, 255, 0, 0.2) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    animation: flicker 60ms infinite;
+    mix-blend-mode: lighten;
+    backdrop-filter: blur(0.5px) brightness(0.9);
+  }
+  
+  .crt-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 120px rgba(0, 255, 0, 0.25);
+  }
+  
+  .crt-active {
+    filter: contrast(1.2) brightness(0.8) saturate(1.5);
+  }
+  
+  @keyframes flicker {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.3; }
+  }
+  
